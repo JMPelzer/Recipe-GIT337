@@ -1,3 +1,134 @@
+/* root selector for CSS color variables */
+:root {
+    --teal: #7abfbf;
+    --sky: rgba(122, 191, 191, .5);
+    --white: #f2f2f2;
+    --black: #0d0d0d;
+    --red: #eb5428;
+}
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background-color: var(--sky);
+}
+
+header {
+    width: 414px;
+    text-align: center;
+}
+
+body {
+    margin: 0 auto;
+    background-color: var(--white);
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 414px;
+
+}
+
+aside {
+    background-color: var(--teal);
+    width: 414px;
+}
+
+/*Fonts*/
+h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 40px;
+
+}
+
+h2 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 30px;
+}
+
+h3 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 25px;
+}
+
+nav a {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 20px;
+}
+
+nav span {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 20px;
+}
+
+menu li {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 20px;
+}
+
+#Social li {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 20px;
+}
+
+footer {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 20px;
+}
+
+p,
+dd,
+li,
+nav,
+input {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+dt {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+
+
+/*main*/
+main {
+    grid-template-rows: 5;
+    width: 414px;
+
+}
+
+
+main img {
+    width: 100%;
+}
+
+#sideMenu li {
+    display: inline-flex;
+}
+
+menu a {
+    text-decoration: none;
+    color: var(--red);
+    text-align: center;
+    margin: 0px 15px 0px 15px;
+}
+
+
+
+main h2 {
+    text-align: center;
+}
+
+#streetTaco p {
+    margin: 5px;
+}
+
 .checked {
     color: orange;
 }
