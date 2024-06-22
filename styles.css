@@ -53,6 +53,10 @@ h3 {
     font-size: 25px;
 }
 
+h4 {
+    display: none;
+}
+
 nav a {
     font-family: "Bebas Neue", sans-serif;
     font-size: 20px;
@@ -68,12 +72,12 @@ menu li {
     font-size: 20px;
 }
 
-#Social li {
+#social li {
     font-family: "Bebas Neue", sans-serif;
     font-size: 20px;
 }
 
-footer {
+footer p {
     font-family: "Bebas Neue", sans-serif;
     font-size: 20px;
 }
@@ -100,35 +104,124 @@ dt {
 main {
     grid-template-rows: 5;
     width: 414px;
-
 }
-
 
 main img {
     width: 100%;
 }
 
+/*SVG icon links*/
 #sideMenu li {
     display: inline-flex;
+    text-align: center;
 }
 
 menu a {
     text-decoration: none;
     color: var(--red);
-    text-align: center;
     margin: 0px 15px 0px 15px;
 }
 
-
-
+/*main headers*/
 main h2 {
     text-align: center;
+    margin-top: 10px;
 }
 
 #streetTaco p {
-    margin: 5px;
+    margin: 4px;
+    padding: 5px;
+}
+
+/*main detail list*/
+dl {
+    width: 100%;
+    padding: 5px;
+}
+
+dt {
+    float: left;
+    width: 30%;
+}
+
+dd {
+    float: left;
+    width: 50%;
+    margin: 3px;
+}
+
+/*ul ol list spacing*/
+
+.ingredients li {
+    padding: 4px;
+}
+
+.direction li {
+    padding: 4px;
+}
+
+/*aside*/
+aside {
+    display: grid;
+}
+
+aside img {
+    width: 40%;
+    float: left;
+}
+
+aside figcaption {
+    width: 50%;
+    margin-top: -20px;
+    float: right;
+
+}
+
+aside h2 {
+    text-align: center;
+}
+
+.unchecked {
+    color: var(--white);
 }
 
 .checked {
-    color: orange;
+    color: var(--red);
+}
+
+/*navigation*/
+
+/*footer*/
+
+
+h4 {}
+
+/*SVG icon links*/
+#social li {
+    display: inline-flex;
+    text-align: center;
+}
+
+#social a {
+    text-decoration: none;
+    color: var(--red);
+    text-align: center;
+    margin: 0px 10px 0px 10px;
+}
+
+.good img {
+    display: block;
+    position: relative;
+    bottom: 65px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.good p {
+    text-align: center;
+    position: relative;
+    top: 200px;
+    margin: 0;
+
 }
