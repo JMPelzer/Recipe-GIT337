@@ -151,14 +151,19 @@ dd {
 }
 
 /*ul ol list spacing*/
+.ingredients ul {
+    margin: 0;
+
+}
 
 .ingredients li {
     padding: 4px;
 }
 
-.direction li {
-    padding: 4px;
+.directions ol {
+    margin: 0;
 }
+
 
 /*aside*/
 aside {
@@ -190,6 +195,42 @@ aside h2 {
 }
 
 /*navigation*/
+nav {
+    border: solid 2px red;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    font-size: 16px;
+    color: var(--red);
+
+}
+
+nav li {
+    border: 2px solid blue;
+
+
+
+}
+
+nav img {
+    width: 25px;
+}
+
+nav a {}
+
+.home {
+    display: block;
+    background-color: var(--red);
+
+}
+
+.avatar {
+    text-decoration: none;
+}
 
 /*footer*/
 
