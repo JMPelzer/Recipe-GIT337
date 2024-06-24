@@ -87,7 +87,7 @@ menu li {
     font-size: 20px;
 }
 
-footer p {
+footer small {
     font-family: "Bebas Neue", sans-serif;
     font-size: 20px;
 }
@@ -150,9 +150,8 @@ main h2 {
 
 /*main detail list*/
 dl {
-    border: 2px solid violet;
     display: grid;
-    grid-template-columns: 100px 200px;
+    grid-template-columns: 90px 200px;
     width: 400px;
     margin-left: 10px;
 }
@@ -191,14 +190,12 @@ aside img {
 }
 
 aside figure {
-    border: 2px solid violet;
     display: inline-flex;
     margin: 5px;
 
 }
 
 aside figcaption {
-    border: 2px solid violet;
     margin-left: 10px;
 }
 
@@ -212,6 +209,7 @@ aside figcaption {
 
 /*navigation*/
 nav {
+    border-bottom: 10px solid rgba(177, 183, 184, 0.55);
     display: flex;
     flex-wrap: wrap;
     text-align: center;
@@ -238,9 +236,6 @@ nav ul {
 }
 
 
-nav img {
-    width: 65px;
-}
 
 nav a:hover {
     color: var(--red);
@@ -269,13 +264,15 @@ nav a:hover {
     width: 110px;
 }
 
-/*form search bar*/
+/*form search bar !!!!!!!!!! move into main with postion relative and change border color*/
 .search {
-    border: 3px solid var(--red);
+    position: relative;
+    border: 3px solid violet;
     width: max-content;
     display: flex;
     align-items: center;
     background-color: #ffffff;
+
 }
 
 .search-input {
@@ -295,17 +292,11 @@ footer {
     width: 414px;
     display: grid;
     grid-template-columns: 1fr;
-    border: 2px solid red;
-}
-
-#social {
-    border: 2px solid green;
-
 
 }
+
 
 #social li {
-    border: 2px solid violet;
     text-decoration: none;
     display: inline-flex;
 
@@ -324,15 +315,16 @@ footer {
 
 footer img {
     grid-row: 2;
-    width: 80%;
-    height: 80%;
+    width: 70%;
+    height: 70%;
     object-fit: contain;
-    margin-left: 40px;
+    margin-left: 45px;
 
 }
 
-footer p {
-    margin-left: 150px;
+footer small {
+    display: block;
+    text-align: center;
 }
 
 
@@ -345,24 +337,55 @@ footer p {
     header {
         width: 768px;
         text-align: start;
-        margin-left: 40px;
+
     }
 
-    /*nav*/
+    /*nav need to fix nav*/
     nav {
+        border: 2px solid violet;
         width: 768px;
-        display: grid;
-        grid-template-columns: 120px 200px 300px 120px;
-        grid-template-rows: 100px 110px;
+
         background-color: #ffffff;
-        box-shadow: 1px 3px 1px #cdcdcf;
+        border-bottom: 10px solid rgba(177, 183, 184, 0.55);
+
+        /*display: flex;
+        flex-wrap: wrap;
+        text-align: center;*/
+
+        display: grid;
+        grid-template-columns: 100px 490px 100px;
+        grid-template-rows: 100px 110px;
     }
+
 
     #navbar {
-        display: block;
-        grid-row-start: 2;
-        margin-left: 80px;
+        display: flex;
 
+
+
+    }
+
+    #navbar li {
+        border: 2px solid violet;
+    }
+
+
+
+    nav a {
+        border: 3px solid greenyellow;
+        display: block;
+        padding: .5rem;
+    }
+
+
+    nav ul {
+        border: 2px solid rgb(125, 18, 125);
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        font-size: 16px;
+        color: var(--red);
     }
 
     .hamburger {
@@ -376,15 +399,14 @@ footer p {
     }
 
     .avatar {
-        grid-column: 4/-1;
+        grid-column: 3/-1;
 
     }
 
     /*form  needs placement*/
-    .search {
-        margin-left: 250px;
+    .search {}
 
-    }
+    /*------------------nav end need to fix this----------------------*/
 
     /*main*/
     main {
@@ -409,19 +431,13 @@ footer p {
 
     /*Details section main*/
     dl {
-        border: 2px solid violet;
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        width: 400px;
-        margin-left: 200px;
+        grid-template-columns: 100px 200px;
+        width: 100%;
+        justify-content: center;
     }
 
-    dt {
-        border: 2px solid violet;
 
-        /*float: left;
-    width: 30%;*/
-    }
 
     /* ingredients and Directions style*/
     .style-div {
@@ -433,60 +449,51 @@ footer p {
     /*aside*/
     aside {
         width: 768px;
+    }
+
+    aside img {
+        width: 40%;
+        height: 80%;
+    }
+
+    .Lg-style {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-
+        grid-template-columns: 360px 360px;
     }
 
-    aside figure {
-        display: inline-flex;
-        margin: 0;
-        width: 70%;
-        height: 70%;
-        object-fit: contain;
 
-    }
 
-    aside figcaption {
-        margin: 10px;
-    }
-
-    /*footer*/
+    /*footer fix footer*/
     footer {
         width: 768px;
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 200px 460px;
         border: 2px solid red;
+    }
+
+    #social {
+        position: relative;
+        grid-column: 2/-1;
+        grid-row: 1;
+        display: flex;
+        justify-content: end;
+
     }
 
     #social li {
         display: inline-flex;
         text-align: center;
-        grid-column-start: 2;
-        grid-column-end: -1;
-        border: 2px solid violet;
 
     }
 
     footer img {
-        border: 2px solid violet;
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row: 1;
         width: 70%;
         height: 70%;
         object-fit: contain;
-
-
     }
 
-    footer p {
-        border: 2px solid violet;
-    }
+
 }
-
-
-
 
 
 @media(min-width:1280px) {
