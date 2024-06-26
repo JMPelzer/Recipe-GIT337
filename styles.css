@@ -143,7 +143,7 @@ main h2 {
     margin-top: 30px;
 }
 
-#streetTaco p {
+.streetTaco {
     margin: 4px;
     padding: 5px;
 }
@@ -213,6 +213,7 @@ nav {
     display: flex;
     flex-wrap: wrap;
     text-align: center;
+
 }
 
 #navbar {
@@ -324,13 +325,13 @@ footer small {
     header {
         width: 768px;
         text-align: start;
-
+        margin: 15px;
     }
 
-    /*nav need to fix nav*/
+    /*nav*/
     nav {
-        border: 2px solid violet;
         width: 768px;
+        position: relative;
         background-color: #ffffff;
         border-bottom: 10px solid rgba(177, 183, 184, 0.55);
         display: grid;
@@ -350,22 +351,12 @@ footer small {
         object-fit: contain;
     }
 
-    #navbar li {
-        border: 2px solid violet;
-
-    }
-
-
-
     nav a {
-        border: 3px solid greenyellow;
         display: block;
         padding: .5rem;
     }
 
-
     nav ul {
-        border: 2px solid rgb(125, 18, 125);
         list-style-type: none;
         margin: 0;
         padding: 0;
@@ -389,10 +380,12 @@ footer small {
 
     }
 
-    /*form  needs placement*/
-    .search {}
-
-    /*------------------nav end need to fix this----------------------*/
+    /*form search area*/
+    .search {
+        position: absolute;
+        right: 140px;
+        top: 20px;
+    }
 
     /*main*/
     main {
@@ -412,7 +405,6 @@ footer small {
     #sideMenu li {
         flex: 0.4;
         padding-left: 20px;
-
     }
 
     /*Details section main*/
@@ -423,14 +415,11 @@ footer small {
         justify-content: center;
     }
 
-
-
     /* ingredients and Directions style*/
     .style-div {
         display: grid;
         grid-template-columns: 230px 530px;
     }
-
 
     /*aside*/
     aside {
@@ -447,8 +436,6 @@ footer small {
         grid-template-columns: 360px 360px;
     }
 
-
-
     /*footer*/
     footer {
         width: 768px;
@@ -462,13 +449,11 @@ footer small {
         grid-row: 1;
         display: flex;
         justify-content: end;
-
     }
 
     #social li {
         display: inline-flex;
         text-align: center;
-
     }
 
     footer img {
@@ -476,8 +461,6 @@ footer small {
         height: 70%;
         object-fit: contain;
     }
-
-
 }
 
 /*------------------MEDIA QUERY 1280PX--------------------------------*/
@@ -489,55 +472,128 @@ footer small {
     header {
         width: 1280px;
         text-align: center;
+        margin-top: 150px;
+        ;
 
     }
 
     /*nav*/
     nav {
         width: 1280px;
+        position: relative;
+        background-color: #ffffff;
+        border-bottom: 10px solid rgba(177, 183, 184, 0.55);
+        display: grid;
+        grid-template-columns: 100px 950px 50px;
+        grid-template-rows: 1fr;
+    }
+
+    #navbar {
         display: flex;
-        justify-content: space-between;
+        grid-column: 2/4;
+        grid-row: 1;
+        align-items: center;
+    }
+
+    #navbar img {
+        width: 55%;
+        height: 55%;
+        object-fit: contain;
+    }
+
+    nav a {
+        display: block;
+        padding: .5rem;
+    }
+
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        font-size: 16px;
+        color: var(--red);
+    }
+
+    .avatar {
+        grid-column: 4/-1;
+
+    }
+
+    .home {
+        width: 120px;
+        align-content: center;
+        background-color: var(--red);
     }
 
     /*main move next to image*/
-    main p {}
+    main {
+        width: 1280px;
+
+    }
+
+    main img {
+        width: 700px;
+    }
+
+    .streetTaco {
+
+        position: relative;
+        width: 550px;
+        left: 700px;
+        bottom: 1060px;
+    }
 
 
 
     /*search bar*/
     .search {
-        margin-left: 480px;
+        top: 200px;
+        right: 480px;
     }
 
     /*main SVG bar*/
     #sideMenu {
         display: block;
         width: 100px;
-        height: 1090px;
+        height: 1050px;
         background-color: var(--white);
         position: absolute;
-
-        border: 3px solid violet;
+        border: 2px solid var(--red);
     }
 
     #sideMenu li {
         display: block;
         margin-bottom: 50px;
-        border: 3px solid violet;
+
     }
+
 
     /*Details bar*/
     .details {
-        width: 1280px;
+        width: 100%;
         background-color: var(--black);
         color: var(--teal);
+        margin-top: -288px;
     }
 
     dl {
-        border: 2px solid violet;
-        display: flex;
-
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        justify-items: center;
+        padding: 5px;
     }
+
+    dt {
+        grid-row: 1;
+    }
+
+    dd {
+        grid-row: 2;
+    }
+
+
+
 
     /* ingredients and Directions style*/
     .style-div {
