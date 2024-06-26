@@ -67,26 +67,10 @@ h4 {
     display: none;
 }
 
-nav a {
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 20px;
-}
-
-nav span {
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 20px;
-}
-
-menu li {
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 20px;
-}
-
-#social li {
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 20px;
-}
-
+nav a,
+nav span,
+menu li,
+#social li,
 footer small {
     font-family: "Bebas Neue", sans-serif;
     font-size: 20px;
@@ -557,7 +541,7 @@ footer small {
         display: block;
         width: 100px;
         height: 1050px;
-        background-color: var(--white);
+        background-color: white;
         position: absolute;
         border: 2px solid var(--red);
     }
@@ -655,5 +639,136 @@ footer small {
         position: relative;
         bottom: 200px;
         left: 100px;
+    }
+}
+
+/*------------EXTRA CREDIT PRINT MEDIA QUERY-----------------*/
+@media print {
+
+
+    /*do not display nav ( I include menu as a form of navigation for the page) as or images*/
+    nav,
+    img,
+    menu {
+        display: none;
+    }
+
+    /*page format*/
+
+
+
+    body,
+    header,
+    main,
+    .streetTaco,
+    .style-div,
+    .ingredients,
+    .directions,
+    .details,
+    dl,
+    aside,
+    .Lg-style,
+    aside figure,
+    footer,
+    #social,
+    .legal {
+        width: 100%;
+        display: block;
+        margin-bottom: 0px;
+        margin-top: 4px;
+    }
+
+    .details {
+        columns: 6;
+        border: 1px solid black;
+        margin-bottom: 5px;
+    }
+
+    .style-div {
+        columns: 2;
+        margin-top: 3px;
+    }
+
+    .Lg-style {
+        columns: 4;
+        gap: 1px;
+    }
+
+    figure {
+        border: 1px solid white;
+    }
+
+    #social {
+        columns: 2;
+        ;
+
+    }
+
+    /*font change to serif  and size*/
+    h1 {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 20px;
+
+
+
+    }
+
+    h2 {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 15px;
+        margin-top: 0px;
+    }
+
+    h3 {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 10px;
+    }
+
+    h4 {
+        display: none;
+    }
+
+    nav a,
+    nav span,
+    menu li,
+    #social li,
+    footer small {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 10px;
+    }
+
+    p,
+    dd,
+    li,
+    nav,
+    input {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-weight: 400;
+        font-size: 16px;
+    }
+
+    dt {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-weight: 700;
+        font-size: 16px;
+    }
+
+    /*replace hyperlinks with full URL*/
+    a[href]::after {
+        content: " (" attr(href) ")";
+        font-size: 10px;
+    }
+
+    #social a[href] {
+        display: block;
+        margin-bottom: 0.1in;
+    }
+
+    #social a[href]::after {
+        content: " " attr(href);
+    }
+
+    @page {
+        margin: 0.5in;
     }
 }
